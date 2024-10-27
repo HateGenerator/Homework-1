@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+/* ↓↓↓БЛОК HEADER↓↓↓ */
+.header {
+    height: 800px;
+    width: 100%;
+    background: url(gamesite/images/Star-1.png) left 63px top 94px/35px no-repeat,
+                url(gamesite/images/Star-2.png) right 63px top 94px/57px no-repeat,
+                url(gamesite/images/Star-3.png) bottom right/ 7px no-repeat,
+                url(gamesite/images/Star-4.png) bottom right/84px no-repeat,
+                url(gamesite/images/largestar2.png) right -100px/1074px 1130px no-repeat,
+                url(gamesite/images/backgroundheader.png) center/100% 800px no-repeat;
+}
+
+.header__title-block {
+    margin-left: 120px;
+    margin-right: 552px;
+}
+
+.header__title-block-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    padding-top: 196px;
+    margin-right: 552px;
+    margin-left: 120;
+}
+
+.header__title-block-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 24px;
+    margin-right: 600px;
+}
+
+.addtext {
+    font-weight: 600;
+}
+
+/* ↓↓↓Кнопка↓↓↓ */
+
+.header__title-block-button {
+    background: #202027;
+    border: 1px solid #202027;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 247px;
+    height: 67px;
+    font-size: 24px;
+    font-weight: 600px;
+    color: rgb(255, 255, 255);
+    margin-top: 64px;
+}
+
+.header__title-block-button:hover {
+    background: #FFFFFF;
+    color: #202027;
+    transition: 0.5s;
+}
+
+/* ↑↑↑Кнопка конец↑↑↑ */
+
+.header__stripe-text {
+    display: none;
+}
+
+.header__stripe-line {
+    margin-top: 156px;
+    display: flex;
+}
+
+ /* ↑↑↑БЛОК HEADER КОНЕЦ↑↑↑ */
+
+/* ↓↓↓БЛОК ОБ ИГРАХ↓↓↓ */
+
+.about-games {
+    background: #202027;
+    background-repeat: no-repeat;
+    background-image: url(gamesite/images/BlackstarXL.png), url(gamesite/images/Blackstar1.png), url(gamesite/images/Blackstar2.png);
+    background-position: left 500px, 
+                
+}
+
+
+.about-games__textblock {
+    margin-top: 94px;
+    margin-left: 119px;
+    margin-right: 120px;
+}
+
+.about-games__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: #ffffff;
+
+}
+
+.about-games__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-top: 24px;
+    margin-right: 533px;
+    padding-right: 433px;
+    color: #FFFFFF;
+}
+
+/* ↓↓↓КАРТОЧСКИ С ИГРАМИ↓↓↓ */
+    
+/* ↓↓ Контейнер со всеми карточками ↓↓ */
+.about-games__gamecards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 72px;
+    margin-left: 119px;
+    margin-right: 943px;
+} 
+/* ↑↑ Контейнер со всеми карточками ↑↑ */
+
+    /* ↓↓ Карточка малого размера ↓↓ */
+.about-games__gamecard-m {
+    width: 378px;
+    height: 473px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+
+}
+
+.about-games__gamelink {
+    text-decoration: none;
+}
+
+.about-games__gamelink-description {
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 36px;
+}
+
+.about-games__gamelink-description__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    width: 108px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
+.about-games__gamelink-description__text {
+    padding-top: 16px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: #000000; 
+}
+    /* ↑↑ Карточка малого размера ↑↑ */
+
+    /* ↓↓ Карточка большого размера ↓↓ */
+
+.about-games__gamecard-xl {
+    width: 378px;
+    height: 512px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    }
+
+    /* ↑↑ Карточка большого размера ↑↑ */
+
+    /* ↓↓ Карточка мега размера ↓↓ */
+
+.about-games__gamecard-xxl {
+    width: 378px;
+    height: 551px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    }
+
+    /* ↑↑ Карточка мега размера ↑↑ */

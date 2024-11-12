@@ -9,29 +9,35 @@ body {
     font-family: "Montserrat", sans-serif;
   }
 
-/* ↓↓↓БЛОК HEADER↓↓↓ */
-.header {
-    height: 800px;
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+  /* ↓↓↓БЛОК HEADER↓↓↓ */
+  .header {
+    margin: auto;
+    max-height: 800px;
     width: 100%;
     background: url(gamesite/images/Star-1.png) left 63px top 94px/35px no-repeat,
                 url(gamesite/images/Star-2.png) right 63px top 94px/57px no-repeat,
-                url(gamesite/images/Star-3.png) bottom right/ 7px no-repeat,
+                url(gamesite/images/Star-3.png) bottom right/ 37px no-repeat,
                 url(gamesite/images/Star-4.png) bottom right/84px no-repeat,
-                url(gamesite/images/largestar2.png) right -100px/1074px 1130px no-repeat,
+                url(gamesite/images/largestar2.png) right -350px/1074px 1130px no-repeat,
                 url(gamesite/images/backgroundheader.png) center/100% 800px no-repeat;
-}
+    background-position: 33% 10%, 28% 17%, 80% 65%, 85% 75%, 132% 108%;
+            }
+
 
 .header__title-block {
     margin-left: 120px;
-    margin-right: 552px;
-}
+    }
 
 .header__title-block-title {
     font-weight: 700;
     font-size: 64px;
     line-height: 78px;
     padding-top: 196px;
-    margin-right: 552px;
     margin-left: 120;
 }
 
@@ -40,14 +46,55 @@ body {
     font-size: 24px;
     line-height: 32px;
     padding-top: 24px;
-    margin-right: 600px;
-}
+    }
 
 .addtext {
     font-weight: 600;
 }
 
-/* ↓↓↓Кнопка↓↓↓ */
+/* ↓↓↓ БЕГУЩАЯ СТРОКА ↓↓↓ */
+
+.header__stripe {
+    background-color: rgb(188, 236, 48);
+    width: 1440px;
+    height: 98px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.header__stripe-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    gap: 138px;
+    
+}
+
+.header__stripe-text-tag {
+    width: 100%;
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.header__stripe-text-tag::before {
+    position: absolute;
+    content:'';
+    background-image: url(gamesite/images/headerstripestar.svg);
+    width: 36px;
+    height: 36px;
+    top: 0;
+    left: -82px;
+}
+
+/* ↑↑↑ БЕГУЩАЯ СТРОКА конец ↑↑↑ */
+
+/* ↓↓↓ Кнопка ↓↓↓ */
 
 .header__title-block-button {
     background: #202027;
@@ -60,6 +107,7 @@ body {
     font-weight: 600px;
     color: rgb(255, 255, 255);
     margin-top: 64px;
+    margin-bottom: 156px;
 }
 
 .header__title-block-button:hover {
@@ -70,15 +118,6 @@ body {
 
 /* ↑↑↑Кнопка конец↑↑↑ */
 
-.header__stripe-text {
-    display: none;
-}
-
-.header__stripe-line {
-    margin-top: 156px;
-    display: flex;
-}
-
  /* ↑↑↑БЛОК HEADER КОНЕЦ↑↑↑ */
 
 /* ↓↓↓БЛОК ОБ ИГРАХ↓↓↓ */
@@ -86,19 +125,20 @@ body {
 .about-games {
     background: #202027;
     background-repeat: no-repeat;
-    background-image: url(gamesite/images/BlackstarXL.png), url(gamesite/images/Blackstar1.png), url(gamesite/images/Blackstar2.png);
-    background-position: left 500px, 
+    background-image: url(gamesite/images/BlackstarXL.png), 
+                      url(gamesite/images/Blackstar1.png), 
+                      url(gamesite/images/Blackstar2.png);
+    background-position: 106% 1%, 22% 55%, 24% 60%;
                 
 }
 
-
 .about-games__textblock {
-    margin-top: 94px;
     margin-left: 119px;
     margin-right: 120px;
 }
 
 .about-games__title {
+    padding-top: 94px;
     font-weight: 700;
     font-size: 64px;
     line-height: 78px;
@@ -111,8 +151,7 @@ body {
     font-weight: 400;
     line-height: 32px;
     padding-top: 24px;
-    margin-right: 533px;
-    padding-right: 433px;
+    letter-spacing: 0px;
     color: #FFFFFF;
 }
 
@@ -124,8 +163,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-top: 72px;
-    margin-left: 119px;
-    margin-right: 943px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 } 
 /* ↑↑ Контейнер со всеми карточками ↑↑ */
 

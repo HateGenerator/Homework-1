@@ -1,0 +1,125 @@
+@media (max-width: 768px) {
+
+.about-games {
+    display: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  
+.header {
+    margin: auto;
+    max-width: 425px;
+    background: 
+        url(gamesite/images/Star-1.png) left 63px top 94px/21px no-repeat,
+        url(gamesite/images/Star-2.png) right 63px top 94px/35px no-repeat,
+        url(gamesite/images/Star-3.png) bottom right/18px no-repeat,
+        url(gamesite/images/Star-4.png) bottom right/39px 41px no-repeat,
+        url(gamesite/images/Largemobilestar.png) no-repeat,
+        url(gamesite/images/backgroundheader.png) center/425px 800px no-repeat;
+    background-position: 35% 10%, 22% 17%, 70% 82%, 86% 89%, 155% -19%;
+}
+
+.header__title-block {
+    font-family: Montserrat;
+    padding-left: 17px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.header__title-block-title {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    
+    
+}
+
+.header__title-block-text {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 24px;
+    
+}
+
+/* ↓↓↓ Кнопка ↓↓↓ */
+.header__title-block-button {
+    background: #202027;
+    border: 1px solid #202027;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    color: rgb(255, 255, 255);
+    margin-bottom: 131px;
+    margin-top: 36px;
+}
+/* ↑↑↑Кнопка конец↑↑↑ */
+
+/* ↓↓↓ БЕГУЩАЯ СТРОКА ↓↓↓ */
+
+.header__stripe {
+    background-color: rgb(188, 236, 48);
+    width: 768px;
+    height: 51px;
+    overflow: hidden;
+    
+}
+
+.header__stripe-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 51.34px;
+    gap: 74.13px;
+    
+}
+
+.header__stripe-text-tag {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 110%;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.header__stripe-text-tag::before {
+    position: absolute;
+    content:'';
+    background-image: url(gamesite/images/headerstripestar.svg);
+    width: 19.34pxx;
+    height: 19.34pxpx;
+    top: -9px;
+    left: -52px;
+}
+
+/* ↑↑↑ БЕГУЩАЯ СТРОКА конец ↑↑↑ */
+
+
+
+
+}

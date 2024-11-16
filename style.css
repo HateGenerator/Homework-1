@@ -4,19 +4,19 @@
     box-sizing: border-box;
   }
  
+  @import "mobile";
 
 body {
     font-family: "Montserrat", sans-serif;
   }
 
 .center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
 }
 
   /* ↓↓↓БЛОК HEADER↓↓↓ */
   .header {
-    margin: auto;
     max-height: 800px;
     width: 100%;
     background: url(gamesite/images/Star-1.png) left 63px top 94px/35px no-repeat,
@@ -25,12 +25,17 @@ body {
                 url(gamesite/images/Star-4.png) bottom right/84px no-repeat,
                 url(gamesite/images/largestar2.png) right -350px/1074px 1130px no-repeat,
                 url(gamesite/images/backgroundheader.png) center/100% 800px no-repeat;
-    background-position: 33% 10%, 28% 17%, 80% 65%, 85% 75%, 132% 108%;
+    background-position: 23% 10%, 19% 17%, 57% 65%, 61% 75%, 132% 108%;
             }
 
 
 .header__title-block {
-    margin-left: 120px;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
     }
 
 .header__title-block-title {
@@ -38,7 +43,7 @@ body {
     font-size: 64px;
     line-height: 78px;
     padding-top: 196px;
-    margin-left: 120;
+    
 }
 
 .header__title-block-text {
@@ -46,7 +51,32 @@ body {
     font-size: 24px;
     line-height: 32px;
     padding-top: 24px;
+    padding-right: 48px;
     }
+
+/* ↓↓↓ Кнопка ↓↓↓ */
+
+.header__title-block-button {
+    background: #202027;
+    border: 1px solid #202027;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 247px;
+    height: 67px;
+    font-size: 24px;
+    font-weight: 600px;
+    color: rgb(255, 255, 255);
+    margin-top: 64px;
+    margin-bottom: 156px;
+}
+
+.header__title-block-button:hover {
+    background: #FFFFFF;
+    color: #202027;
+    transition: 0.5s;
+}
+
+/* ↑↑↑Кнопка конец↑↑↑ */
 
 .addtext {
     font-weight: 600;
@@ -93,30 +123,6 @@ body {
 }
 
 /* ↑↑↑ БЕГУЩАЯ СТРОКА конец ↑↑↑ */
-
-/* ↓↓↓ Кнопка ↓↓↓ */
-
-.header__title-block-button {
-    background: #202027;
-    border: 1px solid #202027;
-    box-sizing: border-box;
-    border-radius: 30px;
-    width: 247px;
-    height: 67px;
-    font-size: 24px;
-    font-weight: 600px;
-    color: rgb(255, 255, 255);
-    margin-top: 64px;
-    margin-bottom: 156px;
-}
-
-.header__title-block-button:hover {
-    background: #FFFFFF;
-    color: #202027;
-    transition: 0.5s;
-}
-
-/* ↑↑↑Кнопка конец↑↑↑ */
 
  /* ↑↑↑БЛОК HEADER КОНЕЦ↑↑↑ */
 
@@ -233,3 +239,4 @@ body {
     }
 
     /* ↑↑ Карточка мега размера ↑↑ */
+

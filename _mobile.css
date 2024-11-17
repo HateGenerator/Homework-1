@@ -4,11 +4,6 @@
     display: none;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
-  }
-
-  
 .header {
     margin: auto;
     max-width: 425px;
@@ -78,7 +73,7 @@ body {
 /* ↑↑↑Кнопка конец↑↑↑ */
 
 /* ↓↓↓ БЕГУЩАЯ СТРОКА ↓↓↓ */
-
+.header__stripe {display: none;}
 .header__stripe {
     background-color: rgb(188, 236, 48);
     width: 768px;

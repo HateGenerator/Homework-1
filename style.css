@@ -6,10 +6,6 @@
  
   @import "mobile";
 
-body {
-    font-family: "Montserrat", sans-serif;
-  }
-
 .center {
     padding-left: calc(50% - 720px);
     padding-right: calc(50% - 720px);
@@ -36,6 +32,8 @@ body {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-left: 119px;
+    margin-right: 120px;
     }
 
 .header__title-block-title {
@@ -43,6 +41,7 @@ body {
     font-size: 64px;
     line-height: 78px;
     padding-top: 196px;
+    font-family: Montserrat;
     
 }
 
@@ -52,6 +51,7 @@ body {
     line-height: 32px;
     padding-top: 24px;
     padding-right: 48px;
+    font-family: Montserrat;
     }
 
 /* ↓↓↓ Кнопка ↓↓↓ */
@@ -68,6 +68,7 @@ body {
     color: rgb(255, 255, 255);
     margin-top: 64px;
     margin-bottom: 156px;
+    font-family: Montserrat;
 }
 
 .header__title-block-button:hover {
@@ -110,6 +111,7 @@ body {
     line-height: 110%;
     white-space: nowrap;
     text-transform: uppercase;
+    font-family: Montserrat;
 }
 
 .header__stripe-text-tag::before {
@@ -135,7 +137,7 @@ body {
                       url(gamesite/images/Blackstar1.png), 
                       url(gamesite/images/Blackstar2.png);
     background-position: 106% 1%, 22% 55%, 24% 60%;
-                
+    width: 100%;
 }
 
 .about-games__textblock {
@@ -149,6 +151,7 @@ body {
     font-size: 64px;
     line-height: 78px;
     color: #ffffff;
+    font-family: Montserrat;
 
 }
 
@@ -159,6 +162,7 @@ body {
     padding-top: 24px;
     letter-spacing: 0px;
     color: #FFFFFF;
+    font-family: Montserrat;
 }
 
 /* ↓↓↓КАРТОЧСКИ С ИГРАМИ↓↓↓ */
@@ -207,6 +211,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #000000;
+    font-family: Montserrat;
 }
 
 .about-games__gamelink-description__text {
@@ -215,6 +220,7 @@ body {
     font-weight: 700;
     line-height: 39px;
     color: #000000; 
+    font-family: Montserrat;
 }
     /* ↑↑ Карточка малого размера ↑↑ */
 
@@ -238,5 +244,96 @@ body {
     border-radius: 30px;
     }
 
-    /* ↑↑ Карточка мега размера ↑↑ */
+ /* ↑↑ Карточка мега размера ↑↑ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

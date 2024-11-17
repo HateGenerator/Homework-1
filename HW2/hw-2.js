@@ -9,7 +9,7 @@ const iphone = 2007
 alert(iphone)
 
 // Task 3
-const nameJS = BrendanEich
+const nameJS = "BrendanEich"
 alert(nameJS)
 
 // Task 4
@@ -54,7 +54,7 @@ const user = {
 
 // Task 10
 let question = prompt('Как вас зовут?')
-alert('Привет ${question}!')
+alert(`Привет ${question}!`)
 
 // Additional Task 
 let number = prompt('Загадайте число')

@@ -4,19 +4,15 @@
     box-sizing: border-box;
   }
  
-
-body {
-    font-family: "Montserrat", sans-serif;
-  }
+  @import "mobile";
 
 .center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
 }
 
   /* ↓↓↓БЛОК HEADER↓↓↓ */
   .header {
-    margin: auto;
     max-height: 800px;
     width: 100%;
     background: url(gamesite/images/Star-1.png) left 63px top 94px/35px no-repeat,
@@ -25,12 +21,19 @@ body {
                 url(gamesite/images/Star-4.png) bottom right/84px no-repeat,
                 url(gamesite/images/largestar2.png) right -350px/1074px 1130px no-repeat,
                 url(gamesite/images/backgroundheader.png) center/100% 800px no-repeat;
-    background-position: 33% 10%, 28% 17%, 80% 65%, 85% 75%, 132% 108%;
+    background-position: 23% 10%, 19% 17%, 57% 65%, 61% 75%, 132% 108%;
             }
 
 
 .header__title-block {
-    margin-left: 120px;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 119px;
+    margin-right: 120px;
     }
 
 .header__title-block-title {
@@ -38,7 +41,8 @@ body {
     font-size: 64px;
     line-height: 78px;
     padding-top: 196px;
-    margin-left: 120;
+    font-family: Montserrat;
+    
 }
 
 .header__title-block-text {
@@ -46,7 +50,34 @@ body {
     font-size: 24px;
     line-height: 32px;
     padding-top: 24px;
+    padding-right: 48px;
+    font-family: Montserrat;
     }
+
+/* ↓↓↓ Кнопка ↓↓↓ */
+
+.header__title-block-button {
+    background: #202027;
+    border: 1px solid #202027;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 247px;
+    height: 67px;
+    font-size: 24px;
+    font-weight: 600px;
+    color: rgb(255, 255, 255);
+    margin-top: 64px;
+    margin-bottom: 156px;
+    font-family: Montserrat;
+}
+
+.header__title-block-button:hover {
+    background: #FFFFFF;
+    color: #202027;
+    transition: 0.5s;
+}
+
+/* ↑↑↑Кнопка конец↑↑↑ */
 
 .addtext {
     font-weight: 600;
@@ -80,6 +111,7 @@ body {
     line-height: 110%;
     white-space: nowrap;
     text-transform: uppercase;
+    font-family: Montserrat;
 }
 
 .header__stripe-text-tag::before {
@@ -94,30 +126,6 @@ body {
 
 /* ↑↑↑ БЕГУЩАЯ СТРОКА конец ↑↑↑ */
 
-/* ↓↓↓ Кнопка ↓↓↓ */
-
-.header__title-block-button {
-    background: #202027;
-    border: 1px solid #202027;
-    box-sizing: border-box;
-    border-radius: 30px;
-    width: 247px;
-    height: 67px;
-    font-size: 24px;
-    font-weight: 600px;
-    color: rgb(255, 255, 255);
-    margin-top: 64px;
-    margin-bottom: 156px;
-}
-
-.header__title-block-button:hover {
-    background: #FFFFFF;
-    color: #202027;
-    transition: 0.5s;
-}
-
-/* ↑↑↑Кнопка конец↑↑↑ */
-
  /* ↑↑↑БЛОК HEADER КОНЕЦ↑↑↑ */
 
 /* ↓↓↓БЛОК ОБ ИГРАХ↓↓↓ */
@@ -129,7 +137,7 @@ body {
                       url(gamesite/images/Blackstar1.png), 
                       url(gamesite/images/Blackstar2.png);
     background-position: 106% 1%, 22% 55%, 24% 60%;
-                
+    width: 100%;
 }
 
 .about-games__textblock {
@@ -143,6 +151,7 @@ body {
     font-size: 64px;
     line-height: 78px;
     color: #ffffff;
+    font-family: Montserrat;
 
 }
 
@@ -153,6 +162,7 @@ body {
     padding-top: 24px;
     letter-spacing: 0px;
     color: #FFFFFF;
+    font-family: Montserrat;
 }
 
 /* ↓↓↓КАРТОЧСКИ С ИГРАМИ↓↓↓ */
@@ -201,6 +211,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #000000;
+    font-family: Montserrat;
 }
 
 .about-games__gamelink-description__text {
@@ -209,6 +220,7 @@ body {
     font-weight: 700;
     line-height: 39px;
     color: #000000; 
+    font-family: Montserrat;
 }
     /* ↑↑ Карточка малого размера ↑↑ */
 
@@ -232,4 +244,96 @@ body {
     border-radius: 30px;
     }
 
-    /* ↑↑ Карточка мега размера ↑↑ */
+ /* ↑↑ Карточка мега размера ↑↑ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

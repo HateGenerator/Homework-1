@@ -64,8 +64,52 @@ default:
 
 // Additional Task 1 //
 
+let input = prompt("Пожалуйста, введите любое число");
+let number = parseFloat(input);
+
+if (isNaN(number)) {
+    
+    alert("Ошибка: Введено не число.");
+} else {
+    
+    if (number % 2 === 0) {
+        
+        alert("Число четное");
+    } else {
+        
+        alert("Число нечетное");
+    }
+}
 
 // Additional Task 2 //
+let clientOS = 0; 
 
+if (clientOS === 0) {
+    console.log("Установите версию приложения для iOS по ссылке.");
+} else if (clientOS === 1) {
+    console.log("Установите версию приложения для Android по ссылке.");
+} else {
+    console.log("Неизвестная операционная система.");
+}
 
 // Additional Task 3 //
+let mobileOS = 0; 
+let clientDeviceYear = 2015; 
+
+
+let message = '';
+
+
+if (mobileOS === 0) { // iOS
+    message = "Установите версию приложения для iOS по ссылке.";
+} else if (mobileOS === 1) { // Android
+    message = "Установите версию приложения для Android по ссылке.";
+}
+
+
+if (clientDeviceYear < 2015) {
+    message = message.replace("Установите версию", "Установите облегченную версию");
+}
+
+
+console.log(message);

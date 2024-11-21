@@ -392,7 +392,7 @@
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: flex-end;    
     }
 

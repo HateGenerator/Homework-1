@@ -1,3 +1,4 @@
+//
 // Task 1 //
 let password = 'пароль';
 let askPassword = prompt('Введите пароль')
@@ -92,11 +93,11 @@ if (clientOS === 0) {
     console.log("Неизвестная операционная система.");
 }
 
-// Additional Task 3 //
+// 
 let mobileOS = 0; 
 let clientDeviceYear = 2015; 
 
-
+//
 let message = '';
 
 

@@ -87,7 +87,7 @@
 
 .header__stripe {
     background-color: rgb(188, 236, 48);
-    width: 1440px;
+    width: 100%;
     height: 98px;
     overflow: hidden;
     margin: 0 auto;
@@ -176,6 +176,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    align-items: start;
 } 
 /* ↑↑ Контейнер со всеми карточками ↑↑ */
 
@@ -199,7 +200,7 @@
     padding-bottom: 36px;
 }
 
-.about-games__gamelink-description__title {
+.about-games__gamelink-description__name {
     font-size: 16px;
     font-weight: 500;
     line-height: 110%;
@@ -214,7 +215,7 @@
     font-family: Montserrat;
 }
 
-.about-games__gamelink-description__text {
+.about-games__gamelink-description__desc {
     padding-top: 16px;
     font-size: 32px;
     font-weight: 700;
@@ -224,16 +225,29 @@
 }
     /* ↑↑ Карточка малого размера ↑↑ */
 
-    /* ↓↓ Карточка большого размера ↓↓ */
+    /* ↓↓ Карточка большого размера  ↓↓ */
 
 .about-games__gamecard-xl {
     width: 378px;
     height: 512px;
     background-color: #ffffff;
     border-radius: 30px;
+    
     }
 
     /* ↑↑ Карточка большого размера ↑↑ */
+
+    /* ↓↓ Карточка большого размера 2 ↓↓ */
+
+    .about-games__gamecard-xl2 {
+        width: 378px;
+        height: 512px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        align-self: end;
+        }
+    
+        /* ↑↑ Карточка большого размера 2 ↑↑ */
 
     /* ↓↓ Карточка мега размера ↓↓ */
 
@@ -259,9 +273,13 @@
 }
 
 .mini-games__allcards {
-    margin-top: 72px;
     padding-bottom: 144px;
-    margin-left: 119px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 32px;
+
 }
 
 /* ↓↓ Карточка контент слева ↓↓ */
@@ -273,6 +291,7 @@
     color: #ffffff;
     font-family: Montserrat;
     margin-left: 119px;
+    margin-bottom: 72px;
 }
 
 .mini-games__gamecard {
@@ -281,14 +300,14 @@
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-bottom: 32px;
+    /* align-items: flex-end; */
+
+    
 }
 
 .mini-games__gamecard-text-container {
-    padding-top: 48px;
-    padding-left: 48px;
+    padding: 48px;
+
 
 }
 
@@ -298,6 +317,7 @@
     font-weight: 700;
     line-height: 59px;
     letter-spacing: 0px;
+    margin-bottom: 24px;
 }
 
 .mini-games__gametext {
@@ -306,8 +326,7 @@
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0px;
-    padding-right: 47px;
-    padding-top: 24px;
+    margin-bottom: 36px;
 }
 
 .mini-games__gamebutton {
@@ -320,8 +339,6 @@
     font-size: 24px;
     font-weight: 600px;
     color: rgb(255, 255, 255);
-    margin-top: 64px;
-    margin-bottom: 156px;
     font-family: Montserrat;
 }
 
@@ -346,8 +363,8 @@
     border-radius: 30px;
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-end;
-    margin-bottom: 32px;
+    /* align-items: flex-end; */
+    
     
 }
 
@@ -356,8 +373,7 @@
 }
 
 .mini-games__gamecard-text-container2 {
-    padding-top: 48px;
-    padding-left: 48px;
+    padding: 48px;
 }
 
 .mini-games__gametitle2 {
@@ -366,6 +382,8 @@
     font-weight: 700;
     line-height: 59px;
     letter-spacing: 0px;
+    margin-bottom: 24px;
+margin-bottom: 36px;
 }
 
 .mini-games__gametext2 {
@@ -374,8 +392,8 @@
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0px;
-    padding-right: 47px;
-    padding-top: 24px;
+    margin-bottom: 24px;
+margin-bottom: 36px;
 }
 
 .mini-games__image2 {
@@ -393,12 +411,11 @@
     border-radius: 30px;
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-end;    
+    /* align-items: flex-end;     */
     }
 
 .mini-games__gamecard-text-container3 {
-    padding-top: 48px;
-    padding-left: 48px;
+    padding: 48px;
 
 }
 
@@ -408,6 +425,8 @@
     font-weight: 700;
     line-height: 59px;
     letter-spacing: 0px;
+    margin-bottom: 24px;
+
 }
 
 .mini-games__gametext3 {
@@ -416,8 +435,7 @@
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0px;
-    padding-right: 47px;
-    padding-top: 24px;
+    margin-bottom: 36px;
 }
 
 /* ↑↑ Карточка ПОСЛЕДНЯЯ ↑↑ */

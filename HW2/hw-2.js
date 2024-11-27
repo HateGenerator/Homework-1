@@ -58,7 +58,7 @@ alert(`Привет ${question}!`)
 
 // Additional Task 
 let number = prompt('Загадайте число')
-numberTwo = number ** 2
+numberTwo = number * 2
 alert(numberTwo)
 numberThree = numberTwo + 10
 alert(numberThree)

@@ -297,7 +297,7 @@
 
 .mini-games__gamecard {
     max-width:1200px;
-    height: 500px;
+    /*height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
@@ -306,11 +306,7 @@
     
 }
 
-.mini-games__gamecard-text-container {
-    padding: 48px;
-
-
-}
+.mini-games__gamecard-text-container {padding: 48px;}
 
 .mini-games__gametitle {
     font-family: Montserrat;
@@ -359,7 +355,7 @@
 
 .mini-games__gamecard2 {
     max-width:1200px;
-    height: 500px;
+    /* height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
@@ -384,7 +380,7 @@
     line-height: 59px;
     letter-spacing: 0px;
     margin-bottom: 24px;
-margin-bottom: 36px;
+    margin-bottom: 36px;
 }
 
 .mini-games__gametext2 {
@@ -394,20 +390,17 @@ margin-bottom: 36px;
     line-height: 32px;
     letter-spacing: 0px;
     margin-bottom: 24px;
-margin-bottom: 36px;
+    margin-bottom: 36px;
 }
 
-.mini-games__image2 {
-    position: relative;
-    order: 2;
-}
+
 /* ↑↑ Карточка контент справа ↑↑ */
 
 
 /* ↓↓ Карточка ПОСЛЕДНЯЯ ↓↓ */
 .mini-games__gamecard3 {
     max-width:1200px;
-    height: 500px;
+    /* height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
@@ -441,6 +434,21 @@ margin-bottom: 36px;
 
 /* ↑↑ Карточка ПОСЛЕДНЯЯ ↑↑ */
 
+.about-games__gamecard-m, .about-games__gamecard-xl, .about-games__gamecard-xxl, .about-games__gamecard-xl2 {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.about-games__gamecard-m:hover, .about-games__gamecard-xl:hover, .about-games__gamecard-xxl:hover, .about-games__gamecard-xl2:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+
+
+.mini-games__image2 {
+    display: none;
+}
+
 .footer {
     display: flex; 
     justify-content: center; 
@@ -460,3 +468,36 @@ margin-bottom: 36px;
 }
 
 
+
+
+/* ↓↓ 1 Игра внешка ↓↓ */
+input[type="number"] {
+    width: 100%; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s; 
+}
+
+input[type="number"]:focus {
+    border-color: #66afe9; 
+    outline: none; 
+}
+
+button {
+    padding: 10px 15px; /* Добавляет отступы вокруг текста кнопки */
+    font-size: 16px; /* Увеличивает размер шрифта */
+    background-color: #000000; /* Устанавливает цвет фона */
+    color: white; /* Устанавливает цвет текста */
+    border: none; /* Убирает рамку */
+    border-radius: 5px; /* Закругляет углы */
+    cursor: pointer; /* Меняет курсор на указатель */
+    transition: background-color 0.3s; /* Плавный переход для изменения цвета фона */
+}
+
+button:hover {
+    background-color: #0056b3; /* Изменяет цвет фона при наведении */
+}
+/* ↑↑ 1 Игра внешка ↑↑ */

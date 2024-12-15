@@ -130,7 +130,6 @@
 
  /* ↑↑↑БЛОК HEADER КОНЕЦ↑↑↑ */
 
-.body {}
 
 /* ↓↓↓БЛОК ОБ ИГРАХ↓↓↓ */
 
@@ -286,6 +285,7 @@
     max-width: 1200px;
     margin: 0 auto;
     gap: 32px;
+    overflow: hidden;
 
 }
 
@@ -297,7 +297,8 @@
     line-height: 78px;
     color: #ffffff;
     font-family: Montserrat;
-    margin-left: 119px;
+    /* margin-left: 119px; */
+    padding-left: 119px;
     margin-bottom: 72px;
 }
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import "mobile";
+@import "_mobile.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -15,14 +16,15 @@
   .header {
     max-height: 800px;
     width: 100%;
-    background: url(gamesite/images/Star-1.png) left 63px top 94px/35px no-repeat,
-                url(gamesite/images/Star-2.png) right 63px top 94px/57px no-repeat,
+    background: url(gamesite/images/Star-1.png) left 63px top 94px/ 35px no-repeat,
+                url(gamesite/images/Star-2.png) right 63px top 94px/ 57px no-repeat,
                 url(gamesite/images/Star-3.png) bottom right/ 37px no-repeat,
-                url(gamesite/images/Star-4.png) bottom right/84px no-repeat,
-                url(gamesite/images/largestar2.png) right -350px/1074px 1130px no-repeat,
-                url(gamesite/images/backgroundheader.png) center/100% 800px no-repeat;
+                url(gamesite/images/Star-4.png) bottom right/ 84px no-repeat,
+                url(gamesite/images/largestar2.png) right -350px/ 1074px 1130px no-repeat,
+                url(gamesite/images/backgroundheader.png) center/ 100% 800px no-repeat;
     background-position: 23% 10%, 19% 17%, 57% 65%, 61% 75%, 132% 108%;
-            }
+          
+}
 
 
 .header__title-block {
@@ -128,6 +130,7 @@
 
  /* ↑↑↑БЛОК HEADER КОНЕЦ↑↑↑ */
 
+
 /* ↓↓↓БЛОК ОБ ИГРАХ↓↓↓ */
 
 .about-games {
@@ -177,16 +180,17 @@
     margin-left: auto;
     margin-right: auto;
     align-items: start;
+    
 } 
 /* ↑↑ Контейнер со всеми карточками ↑↑ */
 
-    /* ↓↓ Карточка малого размера ↓↓ */
+/* ↓↓ Карточка малого размера ↓↓ */
 .about-games__gamecard-m {
     width: 378px;
     height: 473px;
     background-color: #FFFFFF;
     border-radius: 30px;
-
+    
 }
 
 .about-games__gamelink {
@@ -223,39 +227,41 @@
     color: #000000; 
     font-family: Montserrat;
 }
-    /* ↑↑ Карточка малого размера ↑↑ */
+/* ↑↑ Карточка малого размера ↑↑ */
 
-    /* ↓↓ Карточка большого размера  ↓↓ */
+/* ↓↓ Карточка большого размера  ↓↓ */
 
 .about-games__gamecard-xl {
     width: 378px;
     height: 512px;
     background-color: #ffffff;
     border-radius: 30px;
-    
+        
     }
 
-    /* ↑↑ Карточка большого размера ↑↑ */
+/* ↑↑ Карточка большого размера ↑↑ */
 
-    /* ↓↓ Карточка большого размера 2 ↓↓ */
+/* ↓↓ Карточка большого размера 2 ↓↓ */
 
-    .about-games__gamecard-xl2 {
-        width: 378px;
-        height: 512px;
-        background-color: #ffffff;
-        border-radius: 30px;
-        align-self: end;
-        }
+ .about-games__gamecard-xl2 {
+    width: 378px;
+    height: 512px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    align-self: end;
+            
+    }
     
-        /* ↑↑ Карточка большого размера 2 ↑↑ */
+/* ↑↑ Карточка большого размера 2 ↑↑ */
 
-    /* ↓↓ Карточка мега размера ↓↓ */
+/* ↓↓ Карточка мега размера ↓↓ */
 
 .about-games__gamecard-xxl {
     width: 378px;
     height: 551px;
     background-color: #ffffff;
     border-radius: 30px;
+        
     }
 
  /* ↑↑ Карточка мега размера ↑↑ */
@@ -279,6 +285,7 @@
     max-width: 1200px;
     margin: 0 auto;
     gap: 32px;
+    overflow: hidden;
 
 }
 
@@ -290,13 +297,14 @@
     line-height: 78px;
     color: #ffffff;
     font-family: Montserrat;
-    margin-left: 119px;
+    /* margin-left: 119px; */
+    padding-left: 119px;
     margin-bottom: 72px;
 }
 
 .mini-games__gamecard {
     max-width:1200px;
-    height: 500px;
+    /*height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
@@ -305,11 +313,7 @@
     
 }
 
-.mini-games__gamecard-text-container {
-    padding: 48px;
-
-
-}
+.mini-games__gamecard-text-container {padding: 48px;}
 
 .mini-games__gametitle {
     font-family: Montserrat;
@@ -358,7 +362,7 @@
 
 .mini-games__gamecard2 {
     max-width:1200px;
-    height: 500px;
+    /* height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
@@ -383,7 +387,7 @@
     line-height: 59px;
     letter-spacing: 0px;
     margin-bottom: 24px;
-margin-bottom: 36px;
+    margin-bottom: 36px;
 }
 
 .mini-games__gametext2 {
@@ -393,20 +397,17 @@ margin-bottom: 36px;
     line-height: 32px;
     letter-spacing: 0px;
     margin-bottom: 24px;
-margin-bottom: 36px;
+    margin-bottom: 36px;
 }
 
-.mini-games__image2 {
-    position: relative;
-    order: 2;
-}
+
 /* ↑↑ Карточка контент справа ↑↑ */
 
 
 /* ↓↓ Карточка ПОСЛЕДНЯЯ ↓↓ */
 .mini-games__gamecard3 {
     max-width:1200px;
-    height: 500px;
+    /* height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
@@ -440,6 +441,21 @@ margin-bottom: 36px;
 
 /* ↑↑ Карточка ПОСЛЕДНЯЯ ↑↑ */
 
+.about-games__gamecard-m, .about-games__gamecard-xl, .about-games__gamecard-xxl, .about-games__gamecard-xl2 {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.about-games__gamecard-m:hover, .about-games__gamecard-xl:hover, .about-games__gamecard-xxl:hover, .about-games__gamecard-xl2:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+
+
+.mini-games__image2 {
+    display: none;
+}
+
 .footer {
     display: flex; 
     justify-content: center; 
@@ -459,3 +475,36 @@ margin-bottom: 36px;
 }
 
 
+
+
+/* ↓↓ 1 Игра внешка ↓↓ */
+input[type="number"] {
+    width: 100%; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s; 
+}
+
+input[type="number"]:focus {
+    border-color: #66afe9; 
+    outline: none; 
+}
+
+button {
+    padding: 10px 15px; 
+    font-size: 16px; 
+    background-color: #000000; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+/* ↑↑ 1 Игра внешка ↑↑ */

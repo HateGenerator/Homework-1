@@ -1,3 +1,4 @@
+// Игра 1 //
 document.addEventListener('DOMContentLoaded', () => {
     let randomNumber; // Переменная для хранения случайного числа
     let attempts = 0; // Переменная для отслеживания количества попыток
@@ -48,3 +49,42 @@ document.addEventListener('DOMContentLoaded', () => {
     playButton.addEventListener('click', startGame);
 });
 
+//Игра 2//
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 20) + 1;
+}
+
+function startGame() {
+    const num1 = getRandomNumber(); 
+    const num2 = getRandomNumber(); 
+    const operations = ['+', '-', '*', '/'];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+
+    let question = `${num1} ${operation} ${num2}`;
+    let correctAnswer;
+
+    switch (operation) {
+        case '+':
+            correctAnswer = num1 + num2;
+            break;
+        case '-':
+            correctAnswer = num1 - num2;
+            break;
+        case '*':
+            correctAnswer = num1 * num2;
+            break;
+        case '/':
+            // Проверка на деление на 0
+            correctAnswer = num2 !== 0 ? (num1 / num2).toFixed(2) : "Деление на ноль невозможно";
+            break;
+    }
+
+    let userAnswer = prompt(`Решите задачу: ${question}`);
+
+    if (parseFloat(userAnswer) === parseFloat(correctAnswer)) {
+        alert("Верно! Молодец!");
+    } else {
+        alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
+    }
+}

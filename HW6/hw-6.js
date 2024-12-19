@@ -12,14 +12,10 @@ for (let i = 0; i < array.length; i++) {
 // Task 2 //
 
 const array2 = [1, 5, 4, 10, 0, 3];
-let index = -1; 
 
-for (let i = 0; i < array2.length; i++) {
-    if (array2[i] === 4) {
-        index = i; 
-        break; 
-    }
-}
+const index = array2.findIndex(element => element === 4);
+
+console.log("Индекс значения 4:", index);
 
 console.log(index); 
 
@@ -59,12 +55,19 @@ console.log(array5);
 let array6 = [9, 8, 7, 'a', 6, 5];
 
 array6.sort((a, b) => {
-    return a - b;
+    
+    return a.toString().localeCompare(b.toString());
 });
 
-array6 = array6.filter(item => item !== 'a');
+if (array6[array6.length - 1] === 'a') {
+    array6.pop(); 
+} else {
+    
+    array6 = array6.filter(element => element !== 'a');
+}
 
-console.log(array6);
+console.log("Отсортированный и очищенный массив:", array);
+
 
 // Task 7 //
 
@@ -90,11 +93,15 @@ console.log(reversedStr);
 
 // Task 9 //
 
-const nestedArray = [[1, 2, 3], [4, 5, 6]];
+let array9 = [[1, 2, 3], [4, 5, 6]];
 
-const flatArray = [].concat(...nestedArray);
+let combinedArray = [...array9[0], ...array9[1]];
 
-console.log(flatArray); 
+let flattenedArray = array.flat();
+
+console.log("Объединенный массив с использованием spread:", combinedArray);
+console.log("Объединенный массив с использованием flat:", flattenedArray);
+
 
 // Task 10//
 

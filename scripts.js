@@ -51,10 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Игра 2//
 
+function getRandomNumber() {
+    return Math.floor(Math.random() * 20) + 1;
+}
+
 function startGame() {
-    
-    const num1 = Math.floor(Math.random() * 20) + 1; 
-    const num2 = Math.floor(Math.random() * 20) + 1; 
+    const num1 = getRandomNumber(); 
+    const num2 = getRandomNumber(); 
     const operations = ['+', '-', '*', '/'];
     const operation = operations[Math.floor(Math.random() * operations.length)];
 
@@ -72,7 +75,8 @@ function startGame() {
             correctAnswer = num1 * num2;
             break;
         case '/':
-            correctAnswer = (num1 / num2).toFixed(2); 
+            // Проверка на деление на 0
+            correctAnswer = num2 !== 0 ? (num1 / num2).toFixed(2) : "Деление на ноль невозможно";
             break;
     }
 

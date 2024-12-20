@@ -143,4 +143,42 @@ function startQuiz() {
 
 //Игра 5 Камень, ножницы, бумага//
 
+function playGame() {
+
+    const choices = ["камень", "ножницы", "бумага"];
+    
+    let userChoice = prompt("Выберите: 1 - камень, 2 - ножницы, 3 - бумага").trim().toLowerCase();
+
+    if (userChoice === "1") {
+        userChoice = "камень";
+    } else if (userChoice === "2") {
+        userChoice = "ножницы";
+    } else if (userChoice === "3") {
+        userChoice = "бумага";
+    }
+
+    if (!choices.includes(userChoice)) {
+        alert("Некорректный выбор. Пожалуйста, выберите 1, 2 или 3, или введите камень, ножницы или бумага.");
+        return;
+    }
+
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    let result;
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Вы проиграли!";
+    }
+
+    alert(`Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}\n${result}`);
+}
+
+
 //Игра 6 Генератор случайных цветов//

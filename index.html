@@ -99,7 +99,7 @@
     <div class="mini-games__background">
         <h2 class="mini-games__title">Мини-игры</h2>
         <div class="mini-games__allcards">
-            <article class="mini-games__gamecard">
+            <article class="mini-games__gamecard"> <!--Игра 1-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/guessermob.png" alt="guesserMOB">
                 <div class="mini-games__gamecard-text-container">
                     <div class="mini-games__gamecard-textonly">
@@ -111,7 +111,7 @@
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/guesserXL.png" alt="guesserXL">
                 
             </article>
-            <article class="mini-games__gamecard2">
+            <article class="mini-games__gamecard2"> <!--Игра 2-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/countingmob.png" alt="countingMOB">
                 <div class="mini-games__gamecard-text-container2">
                     <div class="mini-games__gamecard-textonly2">
@@ -123,31 +123,36 @@
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/countingXL.png" alt="countingXL">
                 
             </article>
-            <article class="mini-games__gamecard">
+            <article class="mini-games__gamecard"> <!--Игра 3-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/viceversamob.png" alt="viceversaMOB">
                 <div class="mini-games__gamecard-text-container">
                     <div class="mini-games__gamecard-textonly">
                         <h3 class="mini-games__gametitle">Переверни текст</h3>
                         <p class="mini-games__gametext">Попробуй ввести текст, который будет перевернут.</p>
                     </div>    
-                    <button class="mini-games__gamebutton">Играть!</button>
+                    <button class="mini-games__gamebutton" onclick="showInput()">Играть!</button>
+                    <div class="inputContainer" style="display: none;">
+                        <input type="text" class="userInput" placeholder="Введите текст здесь" class="mini-games__input">
+                        <button onclick="reverseText()">Перевернуть текст</button>
+                        <p class="result" class="mini-games__result"></p>
+                    </div>
                 </div>
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/viceversaXL.png" alt="viceversaXL">
                 
             </article>
-            <article class="mini-games__gamecard2">
+            <article class="mini-games__gamecard2"> <!--Игра 4-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/geoguessermob.png" alt="geoguesserMOB">
                 <div class="mini-games__gamecard-text-container2">
                     <div class="mini-games__gamecard-textonly2">
                         <h3 class="mini-games__gametitle2">Викторина</h3>
                         <p class="mini-games__gametext2">Отвечай на вопросы викторины с вариантами ответов.</p>
                     </div>
-                    <button class="mini-games__gamebutton">Играть!</button>
+                    <button class="mini-games__gamebutton" onclick="startQuiz()">Играть!</button>
                 </div>
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/geoguesserXL.png" alt="geoguesserXL">
                 
             </article>
-            <article class="mini-games__gamecard">
+            <article class="mini-games__gamecard"> <!--Игра 5-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/rockpapermob.png" alt="rockpaperMOB">
                 <div class="mini-games__gamecard-text-container">
                     <div class="mini-games__gamecard-textonly">
@@ -159,7 +164,7 @@
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/rockpaperXL.png" alt="rockpaperXL">
                 
             </article>
-            <article class="mini-games__gamecard3">
+            <article class="mini-games__gamecard3"> <!--Игра 6-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/manycolorsmob.png" alt="manycolorsMOB">
                 <div class="mini-games__gamecard-text-container3">
                     <div class="mini-games__gamecard-textonly3">
@@ -178,6 +183,6 @@
 <h4 class="footer__text">Все права защищены</h4>
 </footer>
 <script src="scripts.js"></script>
-<script src="HW6/hw-6.js"> </script>
+<script src="HW7/hw-7.js"> </script>
 </body>
 </html>

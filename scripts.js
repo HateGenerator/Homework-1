@@ -1,55 +1,51 @@
-// Игра 1 //
+// Игра 1 Угадай число//
 document.addEventListener('DOMContentLoaded', () => {
-    let randomNumber; // Переменная для хранения случайного числа
-    let attempts = 0; // Переменная для отслеживания количества попыток
+    let randomNumber; 
+    let attempts = 0; 
 
     function startGame() {
         const playButton = document.querySelector('.mini-games__gamebutton');
-        const hintElement = document.createElement('p'); // Создаем новый элемент для подсказок
-        const guessInput = document.createElement('input'); // Создаем поле для ввода числа
-        const guessButton = document.createElement('button'); // Создаем кнопку для угадывания
+        const hintElement = document.createElement('p'); 
+        const guessInput = document.createElement('input'); 
+        const guessButton = document.createElement('button'); 
 
-        // Настраиваем элементы
         guessInput.type = 'number';
         guessInput.placeholder = 'Введите ваше число';
         guessButton.textContent = 'Угадать';
 
-        // Вставляем элементы в DOM (например, в контейнер с текстом игры)
         const gameTextContainer = document.querySelector('.mini-games__gamecard-textonly');
         gameTextContainer.appendChild(guessInput);
         gameTextContainer.appendChild(guessButton);
         gameTextContainer.appendChild(hintElement);
         
-        playButton.style.display = 'none'; // Скрываем кнопку "Играть!"
-        hintElement.textContent = ''; // Очищаем подсказки
-        attempts = 0; // Сбрасываем количество попыток
-        randomNumber = Math.floor(Math.random() * 100) + 1; // Генерируем новое случайное число от 1 до 100
-        console.log(`Сгенерированное число: ${randomNumber}`); // Для отладки
+        playButton.style.display = 'none'; 
+        hintElement.textContent = ''; 
+        attempts = 0; 
+        randomNumber = Math.floor(Math.random() * 100) + 1; 
+        console.log(`Сгенерированное число: ${randomNumber}`); 
 
         guessButton.addEventListener('click', () => {
-            const guess = parseInt(guessInput.value); // Получаем число от пользователя
-            attempts++; // Увеличиваем счетчик попыток
+            const guess = parseInt(guessInput.value); 
+            attempts++;
 
-            // Проверка на правильность ответа
             if (guess === randomNumber) {
                 hintElement.textContent = `Поздравляем! Вы угадали число за ${attempts} попыток!`;
-                guessButton.disabled = true; // Блокируем кнопку после правильного ответа
+                guessButton.disabled = true; 
             } else if (guess < randomNumber) {
                 hintElement.textContent = 'Ваше число слишком мало. Попробуйте еще раз!';
             } else {
                 hintElement.textContent = 'Ваше число слишком велико. Попробуйте еще раз!';
             }
 
-            guessInput.value = ''; // Очищаем поле ввода после попытки
+            guessInput.value = ''; 
         });
     }
 
-    // Привязываем функцию startGame к кнопке "Играть!"
     const playButton = document.querySelector('.mini-games__gamebutton');
     playButton.addEventListener('click', startGame);
 });
 
-//Игра 2//
+//Игра 2 Простая арифметика//
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 20) + 1;
@@ -75,7 +71,6 @@ function startGame() {
             correctAnswer = num1 * num2;
             break;
         case '/':
-            // Проверка на деление на 0
             correctAnswer = num2 !== 0 ? (num1 / num2).toFixed(2) : "Деление на ноль невозможно";
             break;
     }
@@ -88,3 +83,64 @@ function startGame() {
         alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
     }
 }
+
+//Игра 3 Переверни текст//
+
+function showInput() {
+ 
+    const inputContainer = document.querySelector('.inputContainer');
+    inputContainer.style.display = 'block';
+}
+
+function reverseText() {
+   
+    const userInput = document.querySelector('.userInput').value;
+    
+    const reversedText = userInput.split('').reverse().join('');
+    
+    const resultElement = document.querySelector('.result');
+    resultElement.innerText = `Перевернутый текст: ${reversedText}`;
+}
+
+//Игра 4 Викторина//
+
+function startQuiz() {
+    
+    const quiz = [
+        {
+            question: "Какого цвета небо?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2 
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    let score = 0; 
+
+    for (let i = 0; i < quiz.length; i++) {
+        const question = quiz[i];
+        
+        let questionText = question.question + "\n" + question.options.join("\n") + "\nВаш ответ (введите номер варианта):";
+        
+        const userAnswer = prompt(questionText);
+
+        if (parseInt(userAnswer) === question.correctAnswer) {
+            score++; 
+        }
+    }
+
+    alert(`Вы ответили правильно на ${score} из ${quiz.length} вопросов.`);
+}
+
+//Игра 5 Камень, ножницы, бумага//
+
+//Игра 6 Генератор случайных цветов//

@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+.toggleButton, .colorButton, .changeColorButton, .changeTextButton, .resetColorButton, .changeDescriptionButton, .changeParagraphsButton, .addParagraphButton, .removeParagraphButton, .changeColorDescriptionButton, .removeFirstDescriptionButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px; 
+}
+.description {
+    margin: 10px 0;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}

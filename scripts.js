@@ -1,88 +1,79 @@
-// Игра 1 Угадай число//
-document.addEventListener('DOMContentLoaded', () => {
+// Игра 1: Угадай число
+function startGuessingGame() {
     let randomNumber; 
     let attempts = 0; 
+    const hintElement = document.createElement('p'); 
+    const guessInput = document.createElement('input'); 
+    const guessButton = document.createElement('button'); 
 
-    function startGame() {
-        const playButton = document.querySelector('.mini-games__gamebutton');
-        const hintElement = document.createElement('p'); 
-        const guessInput = document.createElement('input'); 
-        const guessButton = document.createElement('button'); 
+    guessInput.type = 'number';
+    guessInput.placeholder = 'Введите ваше число';
+    guessButton.textContent = 'Угадать';
 
-        guessInput.type = 'number';
-        guessInput.placeholder = 'Введите ваше число';
-        guessButton.textContent = 'Угадать';
-
-        const gameTextContainer = document.querySelector('.mini-games__gamecard-textonly');
-        gameTextContainer.appendChild(guessInput);
-        gameTextContainer.appendChild(guessButton);
-        gameTextContainer.appendChild(hintElement);
-        
-        playButton.style.display = 'none'; 
-        hintElement.textContent = ''; 
-        attempts = 0; 
-        randomNumber = Math.floor(Math.random() * 100) + 1; 
-        console.log(`Сгенерированное число: ${randomNumber}`); 
-
-        guessButton.addEventListener('click', () => {
-            const guess = parseInt(guessInput.value); 
-            attempts++;
-
-            if (guess === randomNumber) {
-                hintElement.textContent = `Поздравляем! Вы угадали число за ${attempts} попыток!`;
-                guessButton.disabled = true; 
-            } else if (guess < randomNumber) {
-                hintElement.textContent = 'Ваше число слишком мало. Попробуйте еще раз!';
-            } else {
-                hintElement.textContent = 'Ваше число слишком велико. Попробуйте еще раз!';
-            }
-
-            guessInput.value = ''; 
-        });
-    }
-
+    const gameTextContainer = document.querySelector('.mini-games__gamecard-textonly');
+    gameTextContainer.appendChild(guessInput);
+    gameTextContainer.appendChild(guessButton);
+    gameTextContainer.appendChild(hintElement);
+    
     const playButton = document.querySelector('.mini-games__gamebutton');
-    playButton.addEventListener('click', startGame);
-});
+    playButton.style.display = 'none'; 
+    hintElement.textContent = ''; 
+    attempts = 0; 
+    randomNumber = Math.floor(Math.random() * 100) + 1; 
+    console.log(`Сгенерированное число: ${randomNumber}`); 
 
-//Игра 2 Простая арифметика//
+    guessButton.addEventListener('click', () => {
+        const guess = parseInt(guessInput.value); 
+        attempts++;
 
-function getRandomNumber() {
-    return Math.floor(Math.random() * 20) + 1;
+        if (guess === randomNumber) {
+            hintElement.textContent = `Поздравляем! Вы угадали число за ${attempts} попыток!`;
+            guessButton.disabled = true; 
+        } else if (guess < randomNumber) {
+            hintElement.textContent = 'Ваше число слишком мало. Попробуйте еще раз!';
+        } else {
+            hintElement.textContent = 'Ваше число слишком велико. Попробуйте еще раз!';
+        }
+
+        guessInput.value = ''; 
+    });
 }
 
-function startGame() {
-    const num1 = getRandomNumber(); 
-    const num2 = getRandomNumber(); 
+// Игра 2: Простая арифметика
+
+function startArithmeticGame() {
+
+    const numberOfQuestions = 5;
+    let score = 0;
+
+    for (let i = 0; i < numberOfQuestions; i++) {
+        
+        const num1 = Math.floor(Math.random() * 10) + 1; 
+        const num2 = Math.floor(Math.random() * 10) + 1; 
+        const operation = getRandomOperation();
+
+        const question = `${num1} ${operation} ${num2}`;
+        const userAnswer = prompt(`Решите задачу: ${question}`);
+
+        const correctAnswer = eval(question);
+
+        if (parseInt(userAnswer) === correctAnswer) {
+            alert("Верно!");
+            score++;
+        } else {
+            alert(`Неверно! Правильный ответ: ${correctAnswer}`);
+        }
+    }
+
+    alert(`Игра окончена! Ваш результат: ${score} из ${numberOfQuestions}`);
+}
+
+function getRandomOperation() {
     const operations = ['+', '-', '*', '/'];
-    const operation = operations[Math.floor(Math.random() * operations.length)];
-
-    let question = `${num1} ${operation} ${num2}`;
-    let correctAnswer;
-
-    switch (operation) {
-        case '+':
-            correctAnswer = num1 + num2;
-            break;
-        case '-':
-            correctAnswer = num1 - num2;
-            break;
-        case '*':
-            correctAnswer = num1 * num2;
-            break;
-        case '/':
-            correctAnswer = num2 !== 0 ? (num1 / num2).toFixed(2) : "Деление на ноль невозможно";
-            break;
-    }
-
-    let userAnswer = prompt(`Решите задачу: ${question}`);
-
-    if (parseFloat(userAnswer) === parseFloat(correctAnswer)) {
-        alert("Верно! Молодец!");
-    } else {
-        alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
-    }
+    const randomIndex = Math.floor(Math.random() * operations.length);
+    return operations[randomIndex];
 }
+
 
 //Игра 3 Переверни текст//
 

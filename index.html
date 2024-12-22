@@ -40,7 +40,7 @@
 </div>
 <div class="about-games__gamecards">
     <article class="about-games__gamecard-m">
-    <a class="about-games__gamelink" href="#">
+    <a class="about-games__gamelink" href="#guessGame">
         <img src="gamesite/images/gamesicons/guesser.png" alt="guesser">
         <div class="about-games__gamelink-description">
             <p class="about-games__gamelink-description__name">Игра №1</p>
@@ -49,7 +49,7 @@
     </a>
     </article>
     <article class="about-games__gamecard-xl">
-    <a class="about-games__gamelink" href="#">
+    <a class="about-games__gamelink" href="#countGame">
             <img src="gamesite/images/gamesicons/counting.png" alt="counting">
             <div class="about-games__gamelink-description">
                 <p class="about-games__gamelink-description__name">Игра №2</p>
@@ -58,7 +58,7 @@
     </a>
     </article>
     <article class="about-games__gamecard-m">
-    <a class="about-games__gamelink" href="#">
+    <a class="about-games__gamelink" href="#viceGame">
         <img src="gamesite/images/gamesicons/viceversa.png" alt="viceversa">
         <div class="about-games__gamelink-description">
             <p class="about-games__gamelink-description__name">Игра №3</p>
@@ -67,7 +67,7 @@
     </a>
     </article>
     <article class="about-games__gamecard-xxl">
-    <a class="about-games__gamelink" href="#">
+    <a class="about-games__gamelink" href="#rockGame">
             <img src="gamesite/images/gamesicons/rockpaper.png" alt="rockpaper">
             <div class="about-games__gamelink-description">
                 <p class="about-games__gamelink-description__name">Игра №4</p>
@@ -76,7 +76,7 @@
     </a>
     </article>
     <article class="about-games__gamecard-xl2">
-    <a class="about-games__gamelink" href="#">
+    <a class="about-games__gamelink" href="#geoGame">
             <img src="gamesite/images/gamesicons/geoguesser.png" alt="geoguesser">
             <div class="about-games__gamelink-description">
                 <p class="about-games__gamelink-description__name">Игра №5</p>
@@ -85,7 +85,7 @@
     </a>
     </article>
     <article class="about-games__gamecard-xxl">
-    <a class="about-games__gamelink" href="#">
+    <a class="about-games__gamelink" href="#colorGame">
             <img src="gamesite/images/gamesicons/manycolors.png" alt="manycolors">
             <div class="about-games__gamelink-description">
                 <p class="about-games__gamelink-description__name">Игра №6</p>
@@ -99,31 +99,31 @@
     <div class="mini-games__background">
         <h2 class="mini-games__title">Мини-игры</h2>
         <div class="mini-games__allcards">
-            <article class="mini-games__gamecard"> <!--Игра 1-->
+            <article id="guessGame" class="mini-games__gamecard"> <!--Игра 1-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/guessermob.png" alt="guesserMOB">
                 <div class="mini-games__gamecard-text-container">
                     <div class="mini-games__gamecard-textonly">
                         <h3 class="mini-games__gametitle">Угадай число</h3>
                         <p class="mini-games__gametext">Попробуй угадать случайное число от 1 до 100.</p>
                     </div>    
-                    <button class="mini-games__gamebutton" onclick="startGame()">Играть!</button>
+                    <button class="mini-games__gamebutton" onclick="startGuessingGame()">Играть!</button>
                 </div>
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/guesserXL.png" alt="guesserXL">
                 
             </article>
-            <article class="mini-games__gamecard2"> <!--Игра 2-->
+            <article id="countGame" class="mini-games__gamecard2"> <!--Игра 2-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/countingmob.png" alt="countingMOB">
                 <div class="mini-games__gamecard-text-container2">
                     <div class="mini-games__gamecard-textonly2">
                         <h3 class="mini-games__gametitle2">Простая арифметика</h3>
                         <p class="mini-games__gametext2">Попробуй решить простые арифметические задачки.</p>
                     </div>
-                    <button class="mini-games__gamebutton" onclick="startGame()">Играть!</button>
+                    <button class="mini-games__gamebutton" onclick="startArithmeticGame()">Играть!</button>
                 </div>
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/countingXL.png" alt="countingXL">
                 
             </article>
-            <article class="mini-games__gamecard"> <!--Игра 3-->
+            <article id="viceGame" class="mini-games__gamecard"> <!--Игра 3-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/viceversamob.png" alt="viceversaMOB">
                 <div class="mini-games__gamecard-text-container">
                     <div class="mini-games__gamecard-textonly">
@@ -140,7 +140,7 @@
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/viceversaXL.png" alt="viceversaXL">
                 
             </article>
-            <article class="mini-games__gamecard2"> <!--Игра 4-->
+            <article id="geoGame" class="mini-games__gamecard2"> <!--Игра 4-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/geoguessermob.png" alt="geoguesserMOB">
                 <div class="mini-games__gamecard-text-container2">
                     <div class="mini-games__gamecard-textonly2">
@@ -152,11 +152,15 @@
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/geoguesserXL.png" alt="geoguesserXL">
                 
             </article>
-            <article class="mini-games__gamecard"> <!--Игра 5-->
+            <article id="rockGame" class="mini-games__gamecard"> <!--Игра 5-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/rockpapermob.png" alt="rockpaperMOB">
                 <div class="mini-games__gamecard-text-container">
                     <div class="mini-games__gamecard-textonly">
-                        <h3 class="mini-games__gametitle">Камень, ножницы, бумага</h3>
+                        <h3 class="mini-games__gametitle">
+                            <span>Камень,</span>
+                            <span>ножницы,</span>
+                            <span>бумага</span>
+                        </h3>
                         <p class="mini-games__gametext">Сыграй в популярную игру против компьютера.</p>
                     </div>    
                     <button class="mini-games__gamebutton" onclick="playGame()">Играть!</button>
@@ -164,11 +168,15 @@
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/rockpaperXL.png" alt="rockpaperXL">
                 
             </article>
-            <article class="mini-games__gamecard3"> <!--Игра 6-->
+            <article id="colorGame" class="mini-games__gamecard3"> <!--Игра 6-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/manycolorsmob.png" alt="manycolorsMOB">
                 <div class="mini-games__gamecard-text-container3">
                     <div class="mini-games__gamecard-textonly3">
-                        <h3 class="mini-games__gametitle3">Генератор случайных цветов</h3>
+                        <h3 class="mini-games__gametitle3">
+                            <span>Генератор</span>
+                            <span>случайных</span>
+                            <span>цветов</span>
+                        </h3>
                         <p class="mini-games__gametext3">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
                     </div>
                     <button class="mini-games__gamebutton">Играть!</button>
@@ -183,7 +191,5 @@
 <h4 class="footer__text">Все права защищены</h4>
 </footer>
 <script src="scripts.js"></script>
-<script src="HW7/hw-7.js"> </script>
-<script src="HW8/hw-8.js"> </script>
 </body>
 </html>

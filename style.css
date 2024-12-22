@@ -104,6 +104,7 @@ html {scroll-behavior: smooth;}
     justify-content: center;
     height: 90px;
     gap: 138px;
+    animation: scroll-left 15s linear infinite;
     
 }
 
@@ -126,6 +127,15 @@ html {scroll-behavior: smooth;}
     height: 36px;
     top: 0;
     left: -82px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); 
+    }
+    to {
+        transform: translateX(-100%); 
+    }
 }
 
 /* ↑↑↑ БЕГУЩАЯ СТРОКА конец ↑↑↑ */

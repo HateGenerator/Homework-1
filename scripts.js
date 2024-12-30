@@ -42,26 +42,32 @@ function startGuessingGame() {
 // Игра 2: Простая арифметика
 
 function startArithmeticGame() {
-
     const numberOfQuestions = 5;
     let score = 0;
 
     for (let i = 0; i < numberOfQuestions; i++) {
-        
         const num1 = Math.floor(Math.random() * 10) + 1; 
         const num2 = Math.floor(Math.random() * 10) + 1; 
         const operation = getRandomOperation();
+
+        if (operation === '/' && num2 === 0) {
+            num2 = 1; 
+        }
 
         const question = `${num1} ${operation} ${num2}`;
         const userAnswer = prompt(`Решите задачу: ${question}`);
 
         const correctAnswer = eval(question);
+        
+        const roundedCorrectAnswer = parseFloat(correctAnswer.toFixed(2));
 
-        if (parseInt(userAnswer) === correctAnswer) {
+        const userAnswerParsed = parseFloat(userAnswer);
+
+        if (!isNaN(userAnswerParsed) && userAnswerParsed.toFixed(2) === roundedCorrectAnswer.toFixed(2)) {
             alert("Верно!");
             score++;
         } else {
-            alert(`Неверно! Правильный ответ: ${correctAnswer}`);
+            alert(`Неверно! Правильный ответ: ${roundedCorrectAnswer}`);
         }
     }
 
@@ -73,7 +79,6 @@ function getRandomOperation() {
     const randomIndex = Math.floor(Math.random() * operations.length);
     return operations[randomIndex];
 }
-
 
 //Игра 3 Переверни текст//
 

@@ -89,7 +89,7 @@ html {scroll-behavior: smooth;}
 
 /* ↓↓↓ БЕГУЩАЯ СТРОКА ↓↓↓ */
 
-.header__stripe {
+.header-stripe {
     background-color: rgb(188, 236, 48);
     width: 100%;
     height: 98px;
@@ -97,7 +97,7 @@ html {scroll-behavior: smooth;}
     margin: 0 auto;
 }
 
-.header__stripe-text {
+.header-stripe__text {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -108,7 +108,7 @@ html {scroll-behavior: smooth;}
     
 }
 
-.header__stripe-text-tag {
+.header-stripe__text-tag {
     width: 100%;
     position: relative;
     font-size: 30px;
@@ -119,7 +119,7 @@ html {scroll-behavior: smooth;}
     font-family: Montserrat;
 }
 
-.header__stripe-text-tag::before {
+.header-stripe__text-tag::before {
     position: absolute;
     content:'';
     background-image: url(gamesite/images/headerstripestar.svg);

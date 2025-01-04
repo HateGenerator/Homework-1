@@ -57,12 +57,12 @@
 /* ↑↑↑Кнопка конец↑↑↑ */
 
 /* ↓↓↓ БЕГУЩАЯ СТРОКА ↓↓↓ */
-.header__stripe {display: none;}
 .header__stripe {
     background-color: rgb(188, 236, 48);
     width: 100%;
     height: 51px;
     overflow: hidden;
+    position: relative;
     
 }
 
@@ -71,9 +71,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 51.34px;
+    height: 51px;
     gap: 74.13px;
-    
+    animation: scroll-left 15s linear infinite;
 }
 
 .header__stripe-text-tag {
@@ -90,12 +90,20 @@
     position: absolute;
     content:'';
     background-image: url(gamesite/images/headerstripestar.svg);
-    width: 19.34pxx;
-    height: 19.34pxpx;
+    width: 19.34px;
+    height: 19.34px;
     top: -9px;
     left: -52px;
 }
 
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); 
+    }
+    to {
+        transform: translateX(-100%); 
+    }
+}
 /* ↑↑↑ БЕГУЩАЯ СТРОКА конец ↑↑↑ */
 
 /* ↓↓ Контейнер со всеми карточками ↓↓ */

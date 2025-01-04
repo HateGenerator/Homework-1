@@ -33,17 +33,17 @@
         <p class="header__stripe-text-tag">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</p>
     </div>
 </div>
-<section class="about-games center">
+<section id="about-games" class="about-games center">
 <div class="about-games__textblock">
-    <h2 class="about-games__title">Об играх</h2>
+    <h2 class="about-games__title">Об играх</h2> <!--Блок Об Играх-->
     <p class="about-games__text">В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные – в них может поиграть каждый. <br>Все игры доступны для пользования.</p>
 </div>
-<div class="about-games__gamecards">
+<div class="about-games__gamecards"> <!--Блок Об Играх - карточки-->
     <article class="about-games__gamecard-m">
     <a class="about-games__gamelink" href="#guessGame">
         <img src="gamesite/images/gamesicons/guesser.png" alt="guesser">
         <div class="about-games__gamelink-description">
-            <p class="about-games__gamelink-description__name">Игра №1</p>
+            <h3 class="about-games__gamelink-description__name">Игра №1</h3>
             <p class="about-games__gamelink-description__desc">Угадай число</p>
         </div>
     </a>
@@ -52,7 +52,7 @@
     <a class="about-games__gamelink" href="#countGame">
             <img src="gamesite/images/gamesicons/counting.png" alt="counting">
             <div class="about-games__gamelink-description">
-                <p class="about-games__gamelink-description__name">Игра №2</p>
+                <h3 class="about-games__gamelink-description__name">Игра №2</h3>
                 <p class="about-games__gamelink-description__desc ">Простая арифметика</p>
             </div>
     </a>
@@ -61,7 +61,7 @@
     <a class="about-games__gamelink" href="#viceGame">
         <img src="gamesite/images/gamesicons/viceversa.png" alt="viceversa">
         <div class="about-games__gamelink-description">
-            <p class="about-games__gamelink-description__name">Игра №3</p>
+            <h3 class="about-games__gamelink-description__name">Игра №3</h3>
             <p class="about-games__gamelink-description__desc">Переверни текст</p>
         </div>
     </a>
@@ -70,7 +70,7 @@
     <a class="about-games__gamelink" href="#rockGame">
             <img src="gamesite/images/gamesicons/rockpaper.png" alt="rockpaper">
             <div class="about-games__gamelink-description">
-                <p class="about-games__gamelink-description__name">Игра №4</p>
+                <h3 class="about-games__gamelink-description__name">Игра №4</h3>
                 <p class="about-games__gamelink-description__desc">Камень, ножницы, бумага</p>
             </div>
     </a>
@@ -79,7 +79,7 @@
     <a class="about-games__gamelink" href="#geoGame">
             <img src="gamesite/images/gamesicons/geoguesser.png" alt="geoguesser">
             <div class="about-games__gamelink-description">
-                <p class="about-games__gamelink-description__name">Игра №5</p>
+                <h3 class="about-games__gamelink-description__name">Игра №5</h3>
                 <p class="about-games__gamelink-description__desc">Простая викторина</p>
             </div>
     </a>
@@ -88,16 +88,16 @@
     <a class="about-games__gamelink" href="#colorGame">
             <img src="gamesite/images/gamesicons/manycolors.png" alt="manycolors">
             <div class="about-games__gamelink-description">
-                <p class="about-games__gamelink-description__name">Игра №6</p>
+                <h3 class="about-games__gamelink-description__name">Игра №6</h3>
                 <p class="about-games__gamelink-description__desc">Генератор случайных цветов</p>
             </div>
     </a>
     </article>
 </div>
 </section>
-<section class="mini-games center">
+<section class="mini-games center"> <!--Блок Мини-игры-->
     <div class="mini-games__background">
-        <h2 class="mini-games__title">Мини-игры</h2>
+        <h2 class="mini-games__title">Мини-игры</h2> 
         <div class="mini-games__allcards">
             <article id="guessGame" class="mini-games__gamecard"> <!--Игра 1-->
                 <img class="mini-games__image2" src="gamesite/images/gamesicons/mobile/guessermob.png" alt="guesserMOB">
@@ -132,9 +132,9 @@
                     </div>    
                     <button class="mini-games__gamebutton" onclick="showInput()">Играть!</button>
                     <div class="inputContainer" style="display: none;">
-                        <input type="text" class="userInput" placeholder="Введите текст здесь" class="mini-games__input">
+                        <input type="text" class="userInput mini-games__input" placeholder="Введите текст здесь">
                         <button onclick="reverseText()">Перевернуть текст</button>
-                        <p class="result" class="mini-games__result"></p>
+                        <p class="result mini-games__result"></p>
                     </div>
                 </div>
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/viceversaXL.png" alt="viceversaXL">
@@ -179,7 +179,7 @@
                         </h3>
                         <p class="mini-games__gametext3">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
                     </div>
-                    <button class="mini-games__gamebutton">Играть!</button>
+                    <button class="mini-games__gamebutton" onclick="changeBackgroundColor()">Играть!</button>
                 </div>
                 <img class="mini-games__image1" src="gamesite/images/gamesicons/gamesiconsLarge/manycolorsXL.png" alt="manycolorsXL">
                 

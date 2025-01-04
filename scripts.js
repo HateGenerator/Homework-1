@@ -173,3 +173,29 @@ function playGame() {
 
 
 //Игра 6 Генератор случайных цветов//
+
+function changeBackgroundColor() {
+
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    
+    const miniGamesElement = document.querySelector('.mini-games');
+    miniGamesElement.style.backgroundColor = randomColor;
+}
+
+
+//Скролы кнопки Поехали//
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.header__title-block-button').addEventListener('click', function() {
+        let targetSection;
+
+        // Проверяем ширину окна, чтобы определить мобильную версию
+        if (window.innerWidth <= 768) { // Например, 768px - это порог для мобильных устройств
+            targetSection = document.querySelector('.mini-games'); // Секция для мобильной версии
+        } else {
+            targetSection = document.getElementById('about-games'); // Секция для десктопной версии
+        }
+
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});

@@ -336,7 +336,7 @@ html {scroll-behavior: smooth;}
     margin-bottom: 24px;
 }
 .mini-games__gametitle span {
-    display: block; /* Каждое слово будет на новой строке */
+    display: block; 
 }
 .mini-games__gametext {
     font-family: Montserrat;
@@ -376,12 +376,11 @@ html {scroll-behavior: smooth;}
 
 .mini-games__gamecard2 {
     max-width:1200px;
-    /* height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
     flex-direction: row-reverse;
-    /* align-items: flex-end; */
+    
     
     
 }
@@ -421,12 +420,11 @@ html {scroll-behavior: smooth;}
 /* ↓↓ Карточка ПОСЛЕДНЯЯ ↓↓ */
 .mini-games__gamecard3 {
     max-width:1200px;
-    /* height: 500px; */
     background-color: #FFFFFF;
     border-radius: 30px;
     display: flex;
     flex-direction: row-reverse;
-    /* align-items: flex-end;     */
+    
     }
 
 .mini-games__gamecard-text-container3 {
@@ -444,7 +442,7 @@ html {scroll-behavior: smooth;}
 
 }
 .mini-games__gametitle3 span {
-    display: block; /* Каждое слово будет на новой строке */
+    display: block; 
 }
 
 .mini-games__gametext3 {
